@@ -45,7 +45,8 @@
     font-size : 12px;
 }
 
-.login__signInButton {
+.login__singInButton {
+    width : 100%;
     background : #f0c14b;
     border: 1px solid;
     margin-top : 10px;

@@ -1,20 +1,41 @@
 import React , {useState} from 'react';
 import './Login.css';
-import {Link} from 'react-router-dom';
+import {Link,  useHistory} from 'react-router-dom';
+import {db, auth} from './firebase';
+
 function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('');
+    const history = useHistory();
     const signIn = (event) => {
         event.preventDefault();
-
+        auth.signInWithEmailAndPassword(email, password)
+            .then( () => {
+                history.push('/');
+            })
+            .catch( (error) => {
+                alert(error.message);
+            })
+        
     }
     const register = (event) => {
         event.preventDefault();
+        auth
+            .createUserWithEmailAndPassword(email, password)
+            .then( (authObject)=> {
+                console.log(authObject);
+                if(authObject){
+                    history.push('/');
+                }
+            })
+            .catch( (error) => {
+                alert(error.message);
+            })
     }
     return (
         <div className='login'>
-            <Link to='/home'>
-                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg.png' 
+            <Link to='/'>
+                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png' 
                     className='login__logo' alt='login' />
             </Link>
             <div className='login__container'>
