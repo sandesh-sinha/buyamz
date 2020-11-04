@@ -1,12 +1,15 @@
 import React, { Fragment } from 'react'
 import SearchIcon from '@material-ui/icons/Search';
 import './Header.css';
+import {Link} from 'react-router-dom'
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 function Header() {
     return (
         <Fragment>
             <div className='header'>
-                <img src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'  className='header__logo' alt='header__logo'/>
+                <Link to='/'>
+                    <img src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'  className='header__logo' alt='header__logo'/>
+                </Link>
                 <div className='header__search' >
                     <input className='header__searchInput' type='text' /> 
                     <SearchIcon className='header__searchIcon' />
@@ -30,7 +33,6 @@ function Header() {
                     </div>
                 </div>
             </div>
-            
         </Fragment>
     )
 }
