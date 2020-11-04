@@ -9,25 +9,25 @@ function Home() {
                      className='home__image' alt='home' />   
             </div> 
             <div className='home__row'>
-                <Product title='Laptop' price='150000'  
+                <Product title='Laptop' price={150000}
                          image='https://images-na.ssl-images-amazon.com/images/I/71HXR1mNdYL._SL1500_.jpg'
                          rating={5}
                          />
-                <Product title='Laptop' price='150000'  
+                <Product title='Laptop' price={150000} 
                          image='https://images-na.ssl-images-amazon.com/images/I/71HXR1mNdYL._SL1500_.jpg'
                          rating={5}
                          />
             </div> 
             <div className='home__row'>
-            <Product title='Laptop' price='150000'  
+            <Product title='Laptop' price={150000} 
                          image='https://images-na.ssl-images-amazon.com/images/I/71HXR1mNdYL._SL1500_.jpg'
                          rating={5}
                          />
-                <Product title='Laptop' price='150000'  
+                <Product title='Laptop' price={150000} 
                          image='https://images-na.ssl-images-amazon.com/images/I/71HXR1mNdYL._SL1500_.jpg'
                          rating={5}
                          />
-                <Product title='Laptop' price='150000'  
+                <Product title='Laptop' price={150000}
                          image='https://images-na.ssl-images-amazon.com/images/I/71HXR1mNdYL._SL1500_.jpg'
                          rating={5}
                          />                                                  
