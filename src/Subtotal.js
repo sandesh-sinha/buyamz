@@ -4,13 +4,10 @@ import CurrencyFormat from 'react-currency-format';
 import { useStateValue } from './StateProvider';
 import { getBasketTotal } from './Reducer';
 import {useHistory} from 'react-router-dom';
+
 function Subtotal() {
     const [{basket}, dispatch] = useStateValue();
-    const [total, setTotal] = useState(0)
     const history = useHistory();
-    // useEffect(() => {
-    //     setTotal(basket.map( (item)=> ))
-    // }, [])
     return (
         <div className='subtotal'>
             <CurrencyFormat 

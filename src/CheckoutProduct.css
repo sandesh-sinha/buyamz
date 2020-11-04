@@ -2,10 +2,17 @@
     display : flex;
     margin-top : 20px;
     margin-bottom: 20px;
+    background-color: #fafafa;
 }
 
 .checkoutProduct__info {
     padding-left: 20px;
+}
+
+.checkoutProduct__image{
+    max-height: 300px;
+    object-fit : contain;
+    margin:  15px;
 }
 .checkoutProduct__info > button {
     background : #f0c14b;

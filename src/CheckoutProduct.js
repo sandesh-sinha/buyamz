@@ -22,8 +22,8 @@ function CheckoutProduct({id, image, title , price, rating}) {
                 <div className='checkoutProduct__rating'>
                     <Rating name='rating' value={rating} disabled/>
                 </div>
+                <button onClick={removeFromBasket}>Remove from Basket</button>
             </div>
-            <button onClick={removeFromBasket}>Remove from Basket</button>
         </div>
     )
 }
