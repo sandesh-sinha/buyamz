@@ -4,16 +4,21 @@ import './App.css';
 import Header from './Header';
 import Home from './Home'
 import Checkout from './Checkout'
+import Login from './Login'
 function App() {
   return (
     <Router>
         <div className="app">
-            <Header/>
           <Switch>
+            <Route exact path='/login'>
+              <Login/>
+            </Route>
             <Route exact path='/' >
+              <Header/>
               <Home/>
             </Route>
             <Route exact path='/checkout'>
+              <Header/>
               <Checkout/>
             </Route>
           </Switch>
