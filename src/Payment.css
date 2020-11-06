@@ -24,6 +24,26 @@
 .payment__title {
     flex: 0.2;
 }
-.payment__address , .payment__items{
+.payment__address , .payment__items, .payment__details {
     flex: 0.8;
+}
+
+.payment__detail > form {
+    max-width: 400px;
+}
+
+.payment__detail > h3 {
+    padding-bottom: 20px; 
+}
+
+.payment > form > div > button {
+    background: #f0c14b;
+    border-radius: 2px;
+    width: 100%;
+    height : 30px;
+    border : 1px solid;
+    font-weight: bolder;
+    margin-top : 10px;
+    border-color : #a88734 #9c7e31;
+    color : #111;
 }

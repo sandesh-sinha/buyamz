@@ -2,7 +2,7 @@ import React from 'react';
 import './CheckoutProduct.css'
 import Rating from '@material-ui/lab/Rating'
 import { useStateValue } from './StateProvider';
-function CheckoutProduct({id, image, title , price, rating}) {
+function CheckoutProduct({id, image, title , price, rating, hideButton}) {
     const [{bakset}, dispatch]= useStateValue()
     const removeFromBasket = () => {
         dispatch({
@@ -22,7 +22,9 @@ function CheckoutProduct({id, image, title , price, rating}) {
                 <div className='checkoutProduct__rating'>
                     <Rating name='rating' value={rating} disabled/>
                 </div>
-                <button onClick={removeFromBasket}>Remove from Basket</button>
+                {!hideButton && (
+                    <button onClick={removeFromBasket}>Remove from Basket</button>
+                )}
             </div>
         </div>
     )
